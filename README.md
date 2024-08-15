@@ -110,4 +110,3 @@ This project is licensed under the MIT License.
 ## Contact
 
 For any further questions or inquiries, feel free to contact us at [careers@pleny.com](mailto:careers@pleny.com).
-```

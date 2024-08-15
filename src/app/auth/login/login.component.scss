@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:1440px;
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #e0e0e0;
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+
+    span {
+      margin-left: 10px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+
+  nav {
+    a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #667085;
+      font-size: 16px;
+      line-height:16px;
+      font-weight: 500;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  background-color: #FFFFFF;
+  width: 1440px;;
+  height: 960px;
+  padding: 96px 32px 48px 32px;
+  gap: 32px;
+
+  .login-container {
+    display: flex;
+    justify-content: center;
+    z-index: 99;
+    width: 360px;
+    height: 406px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+
+    .login-card {
+      text-align: center;
+
+      .login-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          text-align: left;
+          margin-bottom: 5px;
+        }
+
+        input {
+          padding: 10px;
+          margin-bottom: 15px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 14px;
+        }
+
+        button {
+          padding: 10px;
+          background-color: #41CCCC;
+          border: none;
+          border-radius: 5px;
+          color: #344054;
+          font-size: 16px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #2aa3a4;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  width: 1440px;
+  height:128px;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1D2939;
+  color: #fff;
+
+  .footer-logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+
+    span {
+      margin-left: 10px;
+      font-size: 16px;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+}

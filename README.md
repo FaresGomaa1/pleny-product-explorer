@@ -15,17 +15,16 @@ This project is a frontend web application developed in Angular, aimed at helpin
 
 ## Tech Stack
 
-- Angular 14 or above
+- Angular 16
 - HTML, SCSS
-- State Management: NgRx (Bonus)
 - GitHub for version control
 
 ## Installation
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/product-explorer.git
-   cd product-explorer
+   git clone https://github.com/FaresGomaa1/pleny-product-explorer.git
+   cd pleny-product-explorer
    ```
 
 2. **Install dependencies:**
@@ -35,7 +34,7 @@ This project is a frontend web application developed in Angular, aimed at helpin
 
 3. **Run the application:**
    ```bash
-   ng serve
+   ng s -o
    ```
    The application will be available at `http://localhost:4200`.
 

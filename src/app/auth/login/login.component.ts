@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { IUserCredentials } from '../../shared/Interfaces/iuser'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ export class LoginComponent {
   loginForm: FormGroup;
   errorMessage: string | null = null;
 
-  constructor(private authService: AuthService, private fb: FormBuilder) {
+  constructor(private authService: AuthService, private fb: FormBuilder, private router: Router) {
     this.loginForm = this.fb.group({
       username: ['', [Validators.required]],
       password: ['', [Validators.required]],
@@ -30,7 +31,8 @@ export class LoginComponent {
       this.authService.login(credentials.username, credentials.password, credentials.expiresInMins).subscribe(
         response => {
           console.log('Login successful:', response);
-          this.errorMessage = null;
+          this.errorMessage = '';
+          this.router.navigate(['/home']);
         },
         error => {
           if (error.status === 400) {

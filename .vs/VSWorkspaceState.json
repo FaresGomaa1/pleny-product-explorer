@@ -3,8 +3,8 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\products"
+    "\\src\\app\\auth"
   ],
-  "SelectedNode": "\\src\\app\\app.module.ts",
+  "SelectedNode": "\\src\\app\\auth\\auth.guard.ts",
   "PreviewInSolutionExplorer": false
 }

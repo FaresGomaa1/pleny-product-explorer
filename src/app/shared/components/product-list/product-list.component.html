@@ -1,0 +1,36 @@
+<div class="product-list-container">
+  <div class="sidebar">
+    <h3>Products</h3>
+    <!--<ul>
+      <li *ngFor="let category of categories">
+        <input type="radio" name="category" [value]="category.id" [checked]="category.selected">
+        <label>{{ category.name }} ({{ category.count }})</label>
+      </li>
+    </ul>-->
+  </div>
+  <div class="product-list">
+    <div *ngFor="let product of productList" class="card">
+      <div class="discount-tag">- {{ product.discountPercentage }}%</div>
+      <img [src]="product.thumbnail" [alt]="product.title" class="product-image">
+      <div class="card-content">
+        <h2 class="product-title">{{ product.title }}</h2>
+        <p class="product-description">{{ product.description }}</p>
+        <div class="price">
+          <span class="original-price">{{ product.price | currency }}</span>
+          <span class="discounted-price">{{ getDiscountedPrice(product) | currency }}</span>
+        </div>
+        <div class="product-details">
+          <p><strong>Brand:</strong> {{ product.brand }}</p>
+          <p><strong>Category:</strong> {{ product.category }}</p>
+          <p><strong>In stock:</strong> {{ product.stock }}</p>
+        </div>
+        <div class="rating">
+          <span class="star">★</span>
+          <span class="rating-score">{{ product.rating }}</span>
+          <span class="rating-count">({{ product.reviews.length }})</span>
+        </div>
+        <button class="add-to-cart-btn">ADD TO CART</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -3,8 +3,11 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\auth"
+    "\\src\\app\\core",
+    "\\src\\app\\shared",
+    "\\src\\app\\shared\\components",
+    "\\src\\app\\shared\\components\\product-list"
   ],
-  "SelectedNode": "\\src\\app\\auth\\auth.guard.ts",
+  "SelectedNode": "\\src\\app\\shared\\components\\product-list\\product-list.component.html",
   "PreviewInSolutionExplorer": false
 }

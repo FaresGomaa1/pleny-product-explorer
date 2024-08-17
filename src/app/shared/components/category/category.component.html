@@ -1,0 +1,9 @@
+<div class="sidebar">
+  <h3>Products</h3>
+  <ul>
+    <li *ngFor="let category of categories">
+      <input type="radio" name="category" [value]="category.slug" (change)="onCategoryChange($event)">
+      <label>{{ category.name }}</label>
+    </li>
+  </ul>
+</div>

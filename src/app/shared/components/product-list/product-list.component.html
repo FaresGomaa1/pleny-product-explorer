@@ -1,15 +1,11 @@
+<app-header (searchEvent)="handleSearch($event)"></app-header>
 <div class="product-list-container">
-  <div class="sidebar">
-    <h3>Products</h3>
-    <!--<ul>
-      <li *ngFor="let category of categories">
-        <input type="radio" name="category" [value]="category.id" [checked]="category.selected">
-        <label>{{ category.name }} ({{ category.count }})</label>
-      </li>
-    </ul>-->
-  </div>
+  <app-category (categoryChange)="onCategoryChange($event)"></app-category>
   <div class="product-list">
-    <div *ngFor="let product of productList" class="card">
+    <div *ngIf="paginatedProducts.length === 0" class="no-products-message">
+      <p>No products available at the moment. Please check back later.</p>
+    </div>
+    <div *ngFor="let product of paginatedProducts" class="card">
       <div class="discount-tag">- {{ product.discountPercentage }}%</div>
       <img [src]="product.thumbnail" [alt]="product.title" class="product-image">
       <div class="card-content">
@@ -32,5 +28,13 @@
         <button class="add-to-cart-btn">ADD TO CART</button>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="con">
+  <div class="pagination">
+    <button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1">&lt;</button>
+    <button *ngFor="let page of pages" (click)="changePage(page)" [class.active]="page === currentPage">{{ page }}</button>
+    <button (click)="changePage(currentPage + 1)" [disabled]="currentPage === totalPages">&gt;</button>
   </div>
 </div>

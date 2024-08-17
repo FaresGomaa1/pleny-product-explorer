@@ -1,0 +1,116 @@
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 10px 20px;
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+
+      span {
+        margin-left: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #1D2939;
+      }
+    }
+
+    nav {
+      ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          margin: 0 10px;
+
+          a {
+            color: #1D2939;
+            text-decoration: none;
+            font-size: 16px;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+
+      input {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 5px 10px;
+        font-size: 16px;
+      }
+
+      button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        color: #ccc;
+        margin-left: 5px;
+
+        &:hover {
+          color: #1D2939;
+        }
+      }
+    }
+
+    .user-actions {
+      display: flex;
+      align-items: center;
+
+      a {
+        color: #1D2939;
+        text-decoration: none;
+        font-size: 16px;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+
+        i {
+          margin-right: 5px;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .fa-shopping-cart {
+        position: relative;
+
+        &:after {
+          content: "2";
+          position: absolute;
+          top: -10px;
+          right: -10px;
+          background: #4cc9f0;
+          color: white;
+          border-radius: 50%;
+          width: 16px;
+          height: 16px;
+          text-align: center;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
